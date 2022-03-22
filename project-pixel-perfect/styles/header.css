@@ -1,0 +1,146 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 50;
+
+  line-height: 0.9;
+  width: 100%;
+
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+
+  border-bottom-style: solid;
+  border-bottom-color: rgba(231, 236, 250);
+  border-bottom-width: 1px;
+  background-color: var(--white-primary);
+}
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+
+  max-width:77.5rem;
+}
+.icon {
+  width: 1.75rem;
+}
+.icon:hover {
+  fill: var(--blue-secondary);
+}
+nav .nav-menu {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+}
+nav .nav-menu .nav-items:nth-child(1) {
+  display: none;
+}
+nav .nav-menu .nav-items .nav-links {
+  font-weight: 600;
+  font-size: 1.05rem;
+
+  text-decoration: none;
+
+  color: var(--black-primary);
+}
+nav .nav-menu .nav-items .nav-links:hover {
+  color: var(--blue-secondary);
+}
+.nav-toggle,
+.nav-untoggle {
+  display: none;
+}
+.open-menu,
+.hide-menu {
+  display: none;
+  width: 1.5rem;
+}
+
+/*========================================
+    R   E   S   P   O   N   S   I   V   E
+  ========================================*/
+
+@media (max-width: 1024px){
+
+  .container {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/*========================================
+T   A   B   L   E   T
+========================================*/
+
+@media (max-width: 768px) {
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--white-primary);
+    justify-content: center;
+    align-items: center;
+    display: none;
+  }
+  nav .nav-menu {
+    flex-direction: column;
+    text-align: center;
+    gap: 2rem;
+    margin-bottom: 1rem;
+  }
+  nav .nav-menu .nav-items,
+  nav .nav-menu .nav-items:nth-child(1) {
+    display: block;
+  }
+  
+  nav .nav-menu .nav-items .nav-links {
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+  
+  .open-menu {
+    display: block;
+  }
+  .nav-toggle:checked ~ nav {
+    display: flex;
+  }
+  .nav-toggle:checked ~ .hide-menu {
+    display: block;
+    position: relative;
+    margin-right: -1rem;
+  }
+  .nav-toggle:checked ~ .open-menu {
+    display: none;
+  }
+  .nav-toggle:checked ~ nav {
+    display: flex;
+  }
+}
+
+/*=====================================
+M   O   B   I   L   E
+=====================================*/
+
+@media (max-width: 640px) {
+
+  .container {
+    width: 100%;
+  
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+}
+
+
