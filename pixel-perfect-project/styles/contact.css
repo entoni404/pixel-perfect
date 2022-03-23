@@ -1,0 +1,110 @@
+.main .section {
+  padding-top: 4.5rem;
+  padding-bottom: 2.5rem;
+}
+.contact-container {
+  max-width: 38.75rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section h1 {
+  margin-top: -0.6rem;
+  margin-bottom: 3rem;
+  font-size: 2.25rem;
+  letter-spacing: 0.05rem;
+}
+
+section .input-content {
+  display: flex;
+  flex-direction: column;
+  margin-top: -1.9rem;
+}
+
+.input {
+  text-align: left;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+section .input-content .input {
+  display: flex;
+  flex-direction: column;
+}
+
+section .input-content .input input,
+section .input-content .input textarea {
+  font-weight: 500;
+  border: 1px solid var(--gray-primary);
+  border-radius: 0.2rem;
+  width: 100%;
+  padding: 0.5rem 0.75rem 0.5rem 0.75rem;
+}
+.input-content .input #name:focus {
+  border: 1px solid var(--dark-gray-secondary );
+}
+
+
+section .input-content .input input {
+  min-height: 2.6rem;
+}
+section .input-content .input label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+section .input-content .input textarea {
+  resize: vertical;
+
+  height: 200px;
+}
+.button-contain {
+  margin-top: 2.3rem;
+}
+.button-contain .button {
+  border-radius: 0.25rem;
+  min-width: 12.5rem;
+  background-color: var(--blue-secondary);
+  padding: 1rem 1rem 1rem 1rem;
+  color: var(--white-primary);
+  font-size: 1rem;
+}
+
+/*=========================================
+    R   E   S   P   O   N   S   I   V   E
+  =========================================*/
+
+@media (max-width: 1024px) {
+  .contact-container h1 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
+/*================================
+T   A   B   L   E   T
+================================*/
+
+@media (max-width: 768px) {
+  .main .section {
+    padding-top: 3rem;
+  }
+  .input-content .input label {
+    font-size: 1.25rem;
+  }
+}
+
+/*=================================
+M   O   B   I   L   E
+=================================*/
+
+ @media (max-width: 640px) {
+  
+   .contact-container h1 {
+     margin-top: -1rem;
+     margin-bottom: 1.3rem;
+   }
+   .input-content .input label {
+     font-size: 1rem;
+   }
+
+} 
